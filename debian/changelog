@@ -1,3 +1,13 @@
+ibus-table (1.3.0.20100621-3) unstable; urgency=low
+
+  * Fix "Switch to dh_python2" (Closes: #635134)
+  * Set DM-Upload-Allowed to yes
+  * Bump Strand-version to 3.9.2 
+  * Set Vcs to git.debian.org
+  * Use dh to simplify debian/rules
+
+ -- Asias He <asias.hejun@gmail.com>  Sun, 24 Jul 2011 20:12:35 +0800
+
 ibus-table (1.3.0.20100621-2) unstable; urgency=low
 
   * debian/control:

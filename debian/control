@@ -4,15 +4,16 @@ Priority: optional
 Maintainer: IME Packaging Team <pkg-ime-devel@lists.alioth.debian.org>
 Uploaders: LI Daobing <lidaobing@debian.org>, Asias He <asias.hejun@gmail.com>
 Build-Depends:
- debhelper (>= 7),
+ debhelper (>= 7.0.50~),
  autotools-dev,
- python-support,
+ python (>= 2.6.6-3~),
  pkg-config,
  libibus-dev (>= 1.2)
-Standards-Version: 3.9.1
+Standards-Version: 3.9.2
 Homepage: http://code.google.com/p/ibus
-Vcs-Bzr: lp:~pkg-ime/ibus/debian-ibus-table
-Vcs-Browser: https://code.launchpad.net/~pkg-ime/ibus/debian-ibus-table
+Vcs-Git: git://git.debian.org/pkg-ime/ibus-table.git
+Vcs-Browser: http://git.debian.org/?p=pkg-ime/ibus-table.git
+DM-Upload-Allowed: yes
 
 Package: ibus-table
 Architecture: all
