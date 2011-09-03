@@ -55,7 +55,7 @@ PRE_UNINSTALL = :
 POST_UNINSTALL = :
 build_triplet = @build@
 host_triplet = @host@
-@IBUS_TABLE_BUILD_ADDITIONAL_TRUE@am__append_1 = latex.svg compose.svg
+@IBUS_TABLE_BUILD_ADDITIONAL_TRUE@am__append_1 = latex.png compose.svg
 subdir = icons/additional
 DIST_COMMON = $(srcdir)/Makefile.am $(srcdir)/Makefile.in
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
@@ -148,6 +148,8 @@ PACKAGE_URL = @PACKAGE_URL@
 PACKAGE_VERSION = @PACKAGE_VERSION@
 PATH_SEPARATOR = @PATH_SEPARATOR@
 PKG_CONFIG = @PKG_CONFIG@
+PKG_CONFIG_LIBDIR = @PKG_CONFIG_LIBDIR@
+PKG_CONFIG_PATH = @PKG_CONFIG_PATH@
 POSUB = @POSUB@
 PYTHON = @PYTHON@
 PYTHON_EXEC_PREFIX = @PYTHON_EXEC_PREFIX@
@@ -218,7 +220,7 @@ top_srcdir = @top_srcdir@
 icons_DATA = $(am__append_1) $(NULL)
 iconsdir = $(pkgdatadir)/icons
 EXTRA_DIST = \
-	latex.svg \
+	latex.png \
 	compose.svg \
 	$(NULL)
 

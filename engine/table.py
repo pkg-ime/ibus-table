@@ -994,17 +994,17 @@ class tabengine (ibus.EngineBase):
 
         if self._full_width_letter[self._mode]:
             self._letter_property.set_icon ( u'%s%s' % (self._icon_dir, 'full-letter.svg') )
-            self._letter_property.set_tooltip ( _(u'Switch to half letter') )
+            self._letter_property.set_tooltip ( _(u'Switch to half-width letter') )
         else:
             self._letter_property.set_icon ( u'%s%s' % (self._icon_dir, 'half-letter.svg') )
-            self._letter_property.set_tooltip ( _(u'Switch to full letter') )
+            self._letter_property.set_tooltip ( _(u'Switch to full-width letter') )
 
         if self._full_width_punct[self._mode]:
             self._punct_property.set_icon ( u'%s%s' % (self._icon_dir, 'full-punct.svg') )
-            self._punct_property.set_tooltip ( _( u'Switch to half punction' ) )
+            self._punct_property.set_tooltip ( _( u'Switch to half-width punctuation' ) )
         else:
             self._punct_property.set_icon ( u'%s%s' % (self._icon_dir,'half-punct.svg' ) )
-            self._punct_property.set_tooltip ( _( u'Switch to full punction' ) )
+            self._punct_property.set_tooltip ( _( u'Switch to full-width punctuation' ) )
         
         if self._editor._py_mode:
             self._py_property.set_icon ( u'%s%s' % (self._icon_dir, 'py-mode.svg' ) )
@@ -1183,7 +1183,7 @@ class tabengine (ibus.EngineBase):
 
     def _convert_to_full_width (self, c):
         '''convert half width character to full width'''
-        if c in [u".", u"\\", u"^", u"_", u"$", u"\"", u"'", u">", u"<" ]:
+        if c in [u".", u"\\", u"^", u"_", u"$", u"\"", u"'", u">", u"<", u"[", u"]", u"{", u"}" ]:
             if c == u".":
                 if self._prev_char and self._prev_char.isdigit () \
                     and self._prev_key and chr (self._prev_key.code) == self._prev_char:
@@ -1216,6 +1216,18 @@ class tabengine (ibus.EngineBase):
             elif c == u">":
                 if self._mode:
                     return u"\u300b"
+            elif c == u"[":
+                if self._mode:
+                    return u"\u300c"
+            elif c == u"]":
+                if self._mode:
+                    return u"\u300d"
+            elif c == u"{":
+                if self._mode:
+                    return u"\u300e"
+            elif c == u"}":
+                if self._mode:
+                    return u"\u300f"
             
         return ibus.unichar_half_to_full (c)
     
