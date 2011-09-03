@@ -8,7 +8,7 @@ Build-Depends:
  autotools-dev,
  python (>= 2.6.6-3~),
  pkg-config,
- libibus-dev (>= 1.2)
+ libibus-1.0-dev
 Standards-Version: 3.9.2
 Homepage: http://code.google.com/p/ibus
 Vcs-Git: git://git.debian.org/pkg-ime/ibus-table.git
@@ -17,7 +17,7 @@ DM-Upload-Allowed: yes
 
 Package: ibus-table
 Architecture: all
-Depends: ${python:Depends}, ${shlibs:Depends}, ${misc:Depends}, ibus (>= 1.3)
+Depends: ${python:Depends}, ${shlibs:Depends}, ${misc:Depends}, ibus (>= 1.3.99.20110419)
 Description: table engine for IBus
  IBus-Table is the IM Engine framework for table-based input methods, such as
  WuBi, ErBi, CangJie and so on.
