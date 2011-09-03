@@ -1,5 +1,5 @@
 Name:       ibus-table
-Version:    1.3.0.20100621
+Version:    1.3.9.20110827
 Release:    1%{?dist}
 Summary:    The Table engine for IBus platform
 License:    LGPLv2+
@@ -88,5 +88,5 @@ ibus-table-createdb -i -n %{_datadir}/ibus-table/tables/additional/latex.db
 %{_datadir}/ibus/engine/latex.engine
 
 %changelog
-* Wed Aug 19 2008 Yu Yuwei <acevery@gmail.com> - 1.3.0.20100621-1
+* Wed Aug 19 2008 Yu Yuwei <acevery@gmail.com> - 1.3.9.20110827-1
 - The first version.
